@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:wallet_transaction_api}/storage/development.sqlite3",
+            "name": "wallet_spi"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
