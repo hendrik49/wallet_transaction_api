@@ -1,7 +1,7 @@
 class Transaction < ApplicationRecord
   belongs_to :wallet
   belongs_to :stock, optional: true
-  belongs_to :recipient_wallet, class_name: 'Wallet', optional: true
+  belongs_to :recipient_wallet, class_name: "Wallet", optional: true
 
   validates :amount, numericality: { greater_than: 0 }
   validates :transaction_type, inclusion: { in: %w[credit debit transfer] }
