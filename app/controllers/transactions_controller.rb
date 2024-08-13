@@ -9,7 +9,7 @@ class TransactionsController < ApplicationController
         wallet: wallet,
         recipient_wallet: recipient_wallet,
         amount: transaction_params[:amount],
-        transaction_type: 'transfer'
+        transaction_type: "transfer"
       )
     end
 
