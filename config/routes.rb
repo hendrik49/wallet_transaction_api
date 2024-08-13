@@ -6,8 +6,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :stocks, only: [ :create, :index ] do
+  end
+
   resources :teams, only: [ :create, :show, :index ] do
-    resources :stocks, only: [ :index ]
+    resources :stocks, only: [ :create, :show, :index ]
   end
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
