@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
     @recipient_wallet = Wallet.find_by(id: transaction_params[:recipient_wallet_id])
     @transaction = @wallet.transactions.build(transaction_params)
 
-    if(params[:transaction_type] == "transfer")
+    if params[:transaction_type] == "transfer"
       transaction = Transaction.new(
         wallet: wallet,
         recipient_wallet: recipient_wallet,
