@@ -14,8 +14,7 @@ class StocksController < ApplicationController
   end
 
   def index
-    @team = Team.find(params[:team_id])
-    @stocks = @team.stocks
+    @stocks = Stock.all
     render json: @stocks
   end
 
